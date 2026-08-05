@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Ramirez - Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f4f4f5;
+      color: #18181b;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .top-bar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .back-link {
+      font-size: 0.85rem;
+      color: #71717a;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #09090b;
+    }
+    .print-btn {
+      background-color: #09090b;
+      color: #ffffff;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: all 0.2s;
+    }
+    .print-btn:hover {
+      background-color: #27272a;
+      transform: translateY(-1px);
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 3rem 3.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      margin-bottom: 1.75rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #09090b;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #27272a;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .contact-info {
+      font-size: 0.875rem;
+      color: #52525b;
+      border-bottom: 2px solid #e4e4e7;
+      padding-bottom: 1rem;
+    }
+    .contact-info a {
+      color: #18181b;
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 1.75rem;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #09090b;
+      border-bottom: 1.5px solid #d4d4d8;
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+    p.summary-text {
+      font-size: 0.925rem;
+      color: #3f3f46;
+      line-height: 1.6;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .skills-column h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #27272a;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.03em;
+    }
+    .skills-list {
+      list-style-type: disc;
+      padding-left: 1.1rem;
+      font-size: 0.875rem;
+      color: #3f3f46;
+    }
+    .skills-list li {
+      margin-bottom: 0.25rem;
+    }
+    .experience-item {
+      margin-bottom: 1.25rem;
+    }
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.15rem;
+    }
+    .company-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #09090b;
+    }
+    .date-range {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #27272a;
+    }
+    .role-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #52525b;
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 1.1rem;
+      font-size: 0.875rem;
+      color: #3f3f46;
+    }
+    ul.bullet-list li {
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+    .education-item {
+      margin-bottom: 0.75rem;
+    }
+    .school-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #52525b;
+      margin-bottom: 0.4rem;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .top-bar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .resume-container {
+        padding: 1.75rem 1.25rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="/" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save PDF
+    </button>
+  </div>
+
+  <div class="resume-container">
+    <header>
+      <h1>JAMES RAMIREZ</h1>
+      <div class="subtitle">CREATIVE VIRTUAL ASSISTANT | GRAPHIC DESIGNER | TECHNICAL WRITER</div>
+      <div class="contact-info">
+        Silang, Cavite, Philippines &nbsp;|&nbsp; 
+        <a href="mailto:jamesbrianramirezzz@gmail.com">jamesbrianramirezzz@gmail.com</a>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">SUMMARY</h2>
+      <p class="summary-text">
+        Detail-oriented and adaptable professional with experience in graphic design, administrative support, technical documentation, and social media management. Skilled in Adobe Photoshop, Canva, Microsoft Office, and digital workflow organization. Experienced in creating visual content, managing documents, and supporting business operations in both freelance and office-based environments.
+      </p>
+    </section>
+
+    <section>
+      <div class="skills-grid">
+        <div class="skills-column">
+          <h2 class="section-title">TECHNICAL SKILLS</h2>
+          <ul class="skills-list">
+            <li>Adobe Photoshop</li>
+            <li>Canva</li>
+            <li>Microsoft Excel</li>
+            <li>Microsoft Word</li>
+            <li>Microsoft PowerPoint</li>
+            <li>Social Media Management</li>
+            <li>Technical Documentation</li>
+            <li>Video Editing</li>
+            <li>AI Tools</li>
+            <li>AutoCAD</li>
+            <li>SketchUp</li>
+          </ul>
+        </div>
+        <div class="skills-column">
+          <h2 class="section-title">SOFT SKILLS</h2>
+          <ul class="skills-list">
+            <li>Communication</li>
+            <li>Time Management</li>
+            <li>Organization</li>
+            <li>Problem Solving</li>
+            <li>Attention to Detail</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="company-name">Enabling Associates Solutions and Commodities Inc.</div>
+          <div class="date-range">Oct 2025 - April 2026</div>
+        </div>
+        <div class="role-title">Lead Technical Writer</div>
+        <ul class="bullet-list">
+          <li>Created and standardized SOPs, work instructions, and internal documentation.</li>
+          <li>Organized technical information into clear and user-friendly documents.</li>
+          <li>Collaborated with teams to improve workflow documentation and operational efficiency.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="company-name">MSAL Construction</div>
+          <div class="date-range">Jan 2024 - Mar 2025</div>
+        </div>
+        <div class="role-title">Administrative & Social Media Assistant</div>
+        <ul class="bullet-list">
+          <li>Managed business social media accounts and customer communication.</li>
+          <li>Organized documents, reports, and administrative records.</li>
+          <li>Assisted in monitoring project progress and daily operations.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="company-name">Freelance</div>
+          <div class="date-range">2019 - Present</div>
+        </div>
+        <div class="role-title">Graphic Designer & Digital Support</div>
+        <ul class="bullet-list">
+          <li>Designed logos, social media graphics, and promotional materials for clients.</li>
+          <li>Edited short-form video content for digital and social media use.</li>
+          <li>Built and customized basic business websites using Wix.</li>
+          <li>Created visual branding assets using Adobe Photoshop and Canva.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">EDUCATION</h2>
+      <div class="experience-header">
+        <div class="company-name">Bachelor of Design in Civil Engineering</div>
+        <div class="date-range">Sep 2021 - Sep 2025</div>
+      </div>
+      <div class="school-name">Philippine Christian University</div>
+      <ul class="bullet-list">
+        <li>Consistent Dean’s Lister, Graduated Cum Laude</li>
+        <li>Won the University’s Rizal Quiz Bee</li>
+        <li>Represented the school at the National Rizal Youth Leadership Institute in Baguio City 2023</li>
+        <li>Won the Table Tennis Doubles Category at CAHEO 2024 and PCU Intramurals 2024</li>
+        <li>Hosted the Mr. and Ms. Engineering 2024</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>

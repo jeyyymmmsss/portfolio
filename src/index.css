@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900 font-sans antialiased selection:bg-zinc-900 selection:text-white transition-colors duration-500;
+  }
+}
+
+/* Custom Scrollbar for modern aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   HIGH-FIDELITY DARK MODE OVERRIDES
+   ========================================================================== */
+.dark body {
+  background-color: #09090b !important; /* Zinc 950 */
+  color: #f4f4f5 !important; /* Zinc 100 */
+}
+
+/* Global Transition to make theme toggle fluid */
+.dark *, .dark *::before, .dark *::after {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+/* Navbar */
+.dark header#portfolio-navbar {
+  border-color: #18181b !important;
+}
+.dark header#portfolio-navbar.bg-white\/80 {
+  background-color: rgba(9, 9, 11, 0.8) !important;
+}
+.dark #nav-logo {
+  color: #ffffff !important;
+}
+.dark nav a {
+  color: #a1a1aa !important;
+}
+.dark nav a:hover {
+  color: #ffffff !important;
+}
+.dark nav a::after {
+  background-color: #ffffff !important;
+}
+.dark #nav-status-badge {
+  background-color: rgba(6, 78, 59, 0.2) !important;
+  color: #34d399 !important;
+  border-color: rgba(4, 120, 87, 0.3) !important;
+}
+.dark #nav-mobile-drawer {
+  background-color: #09090b !important;
+  border-color: #18181b !important;
+}
+.dark #nav-mobile-drawer a {
+  color: #a1a1aa !important;
+}
+.dark #nav-mobile-drawer a:hover {
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.dark section#hero-section {
+  background-color: #09090b !important;
+}
+.dark section#hero-section h1 {
+  color: #18181b !important;
+  text-shadow: 0 8px 32px rgba(255, 255, 255, 0.02), 0 4px 12px rgba(255, 255, 255, 0.01) !important;
+}
+.dark #hero-image-wrapper div.bg-gradient-to-t {
+  background-image: linear-gradient(to top, #09090b, rgba(9, 9, 11, 0.8), transparent) !important;
+}
+.dark .border-zinc-200 {
+  border-color: #18181b !important;
+}
+
+/* Projects Section */
+.dark section#projects-section {
+  background-color: #09090b !important;
+  border-color: #18181b !important;
+}
+.dark section#projects-section h2, 
+.dark section#projects-section h3 {
+  color: #ffffff !important;
+}
+.dark #projects-section .bg-white {
+  background-color: #18181b !important;
+  border-color: #27272a !important;
+}
+.dark #projects-section .text-zinc-900 {
+  color: #ffffff !important;
+}
+.dark #projects-section .text-zinc-600 {
+  color: #d4d4d8 !important;
+}
+.dark #projects-section .text-zinc-500 {
+  color: #a1a1aa !important;
+}
+.dark #projects-section .border-zinc-100 {
+  border-color: #27272a !important;
+}
+.dark #projects-section .border-zinc-150 {
+  border-color: #27272a !important;
+}
+.dark #projects-section .bg-zinc-50 {
+  background-color: #18181b !important;
+}
+
+/* Services Showcase */
+.dark section#services-section {
+  background-color: #09090b !important;
+  border-color: #18181b !important;
+}
+.dark section#services-section h2, 
+.dark section#services-section h3, 
+.dark section#services-section h4 {
+  color: #ffffff !important;
+}
+.dark section#services-section .bg-zinc-50 {
+  background-color: #18181b !important;
+  border-color: #27272a !important;
+}
+.dark section#services-section .bg-white {
+  background-color: #09090b !important;
+  border-color: #27272a !important;
+}
+.dark section#services-section .text-zinc-900 {
+  color: #ffffff !important;
+}
+.dark section#services-section .text-zinc-600 {
+  color: #d4d4d8 !important;
+}
+.dark section#services-section .border-zinc-150 {
+  border-color: #27272a !important;
+}
+.dark section#services-section .text-zinc-800 {
+  color: #e4e4e7 !important;
+}
+
+/* Contact Section */
+.dark section#contact-section {
+  background-color: #09090b !important;
+  border-color: #18181b !important;
+}
+.dark section#contact-section h2, 
+.dark section#contact-section h3 {
+  color: #ffffff !important;
+}
+.dark section#contact-section .bg-white {
+  background-color: #18181b !important;
+  border-color: #27272a !important;
+}
+.dark section#contact-section .bg-zinc-50 {
+  background-color: #27272a !important;
+  border-color: #3f3f46 !important;
+}
+.dark section#contact-section .text-zinc-800 {
+  color: #ffffff !important;
+}
+.dark section#contact-section .text-zinc-600 {
+  color: #d4d4d8 !important;
+}
+.dark section#contact-section .text-zinc-900 {
+  color: #ffffff !important;
+}
+
+/* Footer Section */
+.dark footer {
+  background-color: #09090b !important;
+  border-color: #18181b !important;
+}
+.dark footer .text-zinc-900 {
+  color: #ffffff !important;
+}
+
+/* Flag Waving Animation */
+@keyframes flag-wave {
+  0% {
+    transform: rotate(0deg) translateY(0px) skewY(0deg) scaleX(1);
+  }
+  25% {
+    transform: rotate(1.5deg) translateY(-0.5px) skewY(1.5deg) scaleX(0.98);
+  }
+  50% {
+    transform: rotate(-1.5deg) translateY(0.5px) skewY(-1deg) scaleX(1);
+  }
+  75% {
+    transform: rotate(1deg) translateY(-0.2px) skewY(1.2deg) scaleX(0.97);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px) skewY(0deg) scaleX(1);
+  }
+}
+
+.animate-flag-wave {
+  animation: flag-wave 2.2s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+/* Hide scrollbar utility for horizontal touch scrollable pilled tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

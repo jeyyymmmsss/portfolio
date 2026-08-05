@@ -1,0 +1,6 @@
+{
+  "name": "Modern Portfolio",
+  "description": "A clean, modern, white-themed template for a creative portfolio landing page.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
