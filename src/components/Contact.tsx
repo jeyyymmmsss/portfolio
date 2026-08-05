@@ -26,12 +26,13 @@ export default function Contact({
     const updateTime = () => {
       const now = new Date();
       const options: Intl.DateTimeFormatOptions = {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        timeZoneName: 'short'
-      };
-      setLocalTime(now.toLocaleTimeString('en-US', options));
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  timeZone: 'Asia/Manila', 
+  timeZoneName: 'short'
+};
+setLocalTime(now.toLocaleTimeString('en-US', options));
     };
     updateTime();
     const interval = setInterval(updateTime, 1000);

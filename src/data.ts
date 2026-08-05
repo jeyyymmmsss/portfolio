@@ -3,7 +3,7 @@ import { Project, Service, ExperienceItem } from './types';
 export const INITIAL_PROFILE = {
   name: "James Ramirez",
   title: "Aesthetic Specialist & Indie Vibe Coder",
-  location: "San Francisco, CA",
+  location: "Manila, Philippines",
   bio: "Delivering high-fidelity results across Graphic Design, Social Media Management, Web Design & Development, and Technical Documentation. Committed to clean layouts, delightful micro-animations, and striking visual design.",
   available: true,
   email: "jamesbrianramirezzz@gmail.com",
