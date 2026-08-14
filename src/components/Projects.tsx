@@ -4,7 +4,8 @@ import {
   ArrowUpRight, Plus, X, Globe, Tag, Calendar, ExternalLink, Sparkles, 
   FileText, Share2, Palette, CheckCircle2, Award, MessageSquare, Clock, 
   Check, Settings, ShieldCheck, TrendingUp, Cpu, Workflow, ChevronLeft, ChevronRight,
-  Upload, Image as ImageIcon, Loader2, ChevronDown, Filter, Layers
+  Upload, Image as ImageIcon, Loader2, ChevronDown, Filter, Layers,
+  Maximize2, Sparkle
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -353,171 +354,323 @@ const RIBBON_IMAGES: Record<string, string[]> = {
   'Web Design & Development': UNIFIED_CREATIVE_PROCESS_IMAGES
 };
 
-const GRAPHIC_DESIGN_16_PROJECTS: Project[] = [
+export const GRAPHIC_DESIGN_16_PROJECTS: (Project & { orientation?: 'portrait' | 'landscape'; subGroup?: 'promotionals' | 'posters' | 'thumbnails' })[] = [
+  // 1. PROMOTIONALS (Items 1 - 7)
   {
-    id: "gd-13",
-    title: "Pro Athlete Spotlight YouTube Thumbnail Mockup",
+    id: "gd-promo-1",
+    title: "",
     category: "Graphic Design",
-    client: "YouTube Creative Network",
+    client: "",
     year: "2026",
-    description: "Bold athletic YouTube thumbnail mockup crafted with layered textures, vibrant accents, and high-engagement visual hierarchy.",
-    tags: ["Thumbnail", "YouTube Graphic", "Athlete Feature", "Sports Design"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857097/2_vdcunf.png",
-    orientation: "landscape"
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717525/3_yddely.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-14",
-    title: "Young Adult Year-End Party Invitation",
+    id: "gd-promo-2",
+    title: "",
     category: "Graphic Design",
-    client: "Young Adult Community Network",
+    client: "",
     year: "2026",
-    description: "Festive and modern Young Adult Ministry year-end party invitation graphic featuring vibrant event typography, elegant celebration accents, and venue details.",
-    tags: ["Event Invitation", "Young Adult", "Year-End Party", "Graphic Design"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857176/YA_PNG_gu57sz.png",
-    orientation: "landscape"
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717525/4_o5zztj.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-15",
-    title: "Dune: Cinematic Sci-Fi Movie Poster Concept",
+    id: "gd-promo-3",
+    title: "",
     category: "Graphic Design",
-    client: "Cinematic Creative Studio",
+    client: "",
     year: "2026",
-    description: "Cinematic movie poster design inspired by Dune, featuring minimalist desert typography, atmospheric Arrakis landscape, and epic sci-fi aesthetics.",
-    tags: ["Movie Poster", "Dune", "Cinematic Art", "Poster Design"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857776/2_2_1_vew978.png",
-    orientation: "landscape"
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717526/2_vfek41.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-9",
-    title: "Next-Gen AI & Future Tech YouTube Thumbnail",
+    id: "gd-promo-4",
+    title: "",
     category: "Graphic Design",
-    client: "Tech YouTube Channel",
+    client: "",
     year: "2026",
-    description: "High-engagement technology YouTube thumbnail mockup designed with vibrant tech UI overlays, glowing code elements, and bold click-through typography.",
-    tags: ["Thumbnail", "Tech Graphic", "YouTube Graphic", "AI Technology"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785313721/3_u5ldmu.png",
-    orientation: "landscape"
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717526/1_pydmxb.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-10",
-    title: "Young Adult Night: Worship & Fellowship Event Graphic",
+    id: "gd-promo-5",
+    title: "",
     category: "Graphic Design",
-    client: "Young Adult Ministry",
+    client: "",
     year: "2026",
-    description: "Vibrant Young Adult Night event poster and social graphic featuring modern aesthetics, worship service details, and community fellowship highlights.",
-    tags: ["Event Graphic", "Young Adult", "Worship Night", "Graphic Design"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785313721/5_ruvvzp.png",
-    orientation: "landscape"
-  },
-  {
-    id: "gd-11",
-    title: "High-Impact YouTube Sports Thumbnail Mockup",
-    category: "Graphic Design",
-    client: "YouTube Content Creators",
-    year: "2026",
-    description: "High-clickthrough sports YouTube thumbnail mockup featuring bold contrast typography, glowing stadium flares, and action player cutouts.",
-    tags: ["Thumbnail", "YouTube Graphic", "Action Poster", "Sports Graphic"],
+    description: "",
+    tags: ["Promotionals"],
     image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857047/1_dv0org.png",
-    orientation: "landscape"
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-12",
-    title: "Matchday Arena YouTube Thumbnail Concept",
+    id: "gd-promo-6",
+    title: "",
     category: "Graphic Design",
-    client: "YouTube Sports Creators",
+    client: "",
     year: "2026",
-    description: "Atmospheric matchday YouTube thumbnail design with rich shadows, stadium lighting, and high-visibility sports branding.",
-    tags: ["Thumbnail", "YouTube Graphic", "Matchday Graphic", "Sports Graphic"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857079/4_hecocq.png",
-    orientation: "landscape"
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785313721/5_ruvvzp.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-5",
-    title: "Stephen Curry: Warriors Splash Dynasty Artwork",
+    id: "gd-promo-7",
+    title: "",
     category: "Graphic Design",
-    client: "Golden State Creative Studio",
+    client: "",
     year: "2026",
-    description: "Vibrant Steph Curry graphics design celebrating 3-point mastery, splash motion effects, and championship details.",
-    tags: ["Sports Poster", "Steph Curry", "Warriors", "Basketball Art"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856759/Curry_kz2w5c.png",
-    orientation: "portrait"
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857176/YA_PNG_gu57sz.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
+  },
+
+  // 2. POSTERS / ARTWORKS (Items 8 - 18)
+  {
+    id: "gd-poster-1",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786726762/neymar_1_bjbb6e.png",
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-6",
-    title: "Shohei Ohtani: MLB Two-Way Legend Poster",
+    id: "gd-poster-edwards",
+    title: "",
     category: "Graphic Design",
-    client: "MLB Fine Art Collection",
+    client: "",
     year: "2026",
-    description: "Film-grained textured poster of Shohei Ohtani highlighting signature batting stance and dramatic lighting.",
-    tags: ["Sports Poster", "Shohei Ohtani", "Textured Poster", "MLB Art"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856757/ohtani_vdrgsg.png",
-    orientation: "portrait"
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786726590/edwards_bfhnho.png",
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-7",
-    title: "Stephen Curry: Golden State Championship Art",
+    id: "gd-poster-2",
+    title: "",
     category: "Graphic Design",
-    client: "Bay Area Sports Media",
+    client: "",
     year: "2026",
-    description: "High-contrast Steph Curry sports visual with glowing aura, bold typography, and electric stadium atmosphere.",
-    tags: ["Sports Poster", "Steph Curry", "NBA Poster", "Sports Graphic"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/steph_ksat2u.png",
-    orientation: "portrait"
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717783/westbrook_y1w7iz.png",
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-1",
-    title: "Shohei Ohtani: Dodgers MVP World Series Graphic",
+    id: "gd-poster-3",
+    title: "",
     category: "Graphic Design",
-    client: "MLB & Sports Media",
+    client: "",
     year: "2026",
-    description: "Dynamic sports graphic featuring Shohei Ohtani with layered typography, vibrant lighting, and stadium atmosphere.",
-    tags: ["Sports Poster", "Shohei Ohtani", "MLB Poster", "Graphic Design"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/shohei_ybabm4.png",
-    orientation: "portrait"
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717783/flowg_zeynlo.png",
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-2",
-    title: "Alex Eala: Grand Slam Rising Tennis Star",
+    id: "gd-poster-4",
+    title: "",
     category: "Graphic Design",
-    client: "Tennis World Media",
+    client: "",
     year: "2026",
-    description: "High-energy matchday poster design celebrating Alex Eala with intense typography and dynamic court action graphics.",
-    tags: ["Sports Poster", "Alex Eala", "Tennis Art", "Sports Graphic"],
+    description: "",
+    tags: ["Posters / Artworks"],
     image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/eala_umwmpc.png",
-    orientation: "portrait"
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-3",
-    title: "NBA Superstars: League All-Stars Showcase",
+    id: "gd-poster-5",
+    title: "",
     category: "Graphic Design",
-    client: "NBA Creative Network",
+    client: "",
     year: "2026",
-    description: "Cinematic sports graphics featuring top NBA stars, dramatic shadows, and high-impact stadium lighting.",
-    tags: ["Sports Poster", "NBA", "Basketball Art", "Graphic Design"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/nba2_fjdnpt.png",
-    orientation: "portrait"
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/shohei_ybabm4.png",
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-4",
-    title: "Shai Gilgeous-Alexander: OKC Thunder MVP Poster",
+    id: "gd-poster-6",
+    title: "",
     category: "Graphic Design",
-    client: "Thunder Creative Labs",
+    client: "",
     year: "2026",
-    description: "Stylized SGA portrait graphic design with metallic gradient overlays and bold typography.",
-    tags: ["Sports Poster", "SGA", "Basketball Poster", "MVP Artwork"],
+    description: "",
+    tags: ["Posters / Artworks"],
     image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/sga_n49clo.png",
-    orientation: "portrait"
+    orientation: "portrait",
+    subGroup: "posters"
   },
   {
-    id: "gd-8",
-    title: "Squid Game ₱1,000,000 Challenge YouTube Thumbnail",
+    id: "gd-poster-7",
+    title: "",
     category: "Graphic Design",
-    client: "YouTube Content Creators",
+    client: "",
     year: "2026",
-    description: "High-impact cinematic YouTube thumbnail featuring Squid Game player #067, glowing ₱1,000,000.00 text, and intense color grading.",
-    tags: ["Thumbnail", "Squid Game", "Viral Marketing", "YouTube Graphic"],
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856758/steph_ksat2u.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-8",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856757/ohtani_vdrgsg.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-9",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785856759/Curry_kz2w5c.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-10",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786717782/FC_FINAL_pmsp3t.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+
+  // 3. THUMBNAILS (Items 17 - 24)
+  {
+    id: "gd-thumb-1",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
     image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785313721/1_riyik4.png",
-    orientation: "landscape"
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-2",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785313721/3_u5ldmu.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-3",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857079/4_hecocq.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-4",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1785857097/2_vdcunf.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-5",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786718172/4_idhti1.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-6",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786718173/3_nhsf1b.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-7",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786718174/2_1_ifydiy.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
+  },
+  {
+    id: "gd-thumb-8",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Thumbnails"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1786718178/1_1_qvjzbm.png",
+    orientation: "landscape",
+    subGroup: "thumbnails"
   }
 ];
 
@@ -619,6 +772,10 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
   const [isMobileCategoryOpen, setIsMobileCategoryOpen] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
   const [activeCaseStudyProject, setActiveCaseStudyProject] = useState<Project | null>(null);
+
+  // Graphic Design Custom Spotlight View States
+  const [gdFilter, setGdFilter] = useState<'all' | 'promotionals' | 'posters' | 'thumbnails'>('all');
+  const [gdSpotlightIndex, setGdSpotlightIndex] = useState<number>(0);
 
   // Gallery Modal specific state
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
@@ -807,11 +964,7 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
       label: "01 / GRAPHIC DESIGN",
       oneLiner: "Sports posters, event graphics, thumbnails, promotional materials, and branding assets.",
       intro: "Graphic design focused on impact, clarity, and visual storytelling. My work includes sports posters, event graphics, thumbnails, promotional materials, and branding assets created with strong typography, composition, and a consistent visual identity.",
-      getProjects: () => {
-        const landscapes = GRAPHIC_DESIGN_16_PROJECTS.filter(p => p.orientation === 'landscape');
-        const portraits = GRAPHIC_DESIGN_16_PROJECTS.filter(p => p.orientation === 'portrait');
-        return [...landscapes, ...portraits];
-      }
+      getProjects: () => GRAPHIC_DESIGN_16_PROJECTS
     },
     {
       id: "social-mgmt",
@@ -1193,34 +1346,187 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
 
                 {/* RIGHT COLUMN: Straight-up Gallery Section (Width: 70%) */}
                 <div className="w-full md:w-[70%]">
-                  {allProjects.length > 0 ? (
-                    section.title === 'Graphic Design' ? (
-                      <div className="columns-2 sm:columns-3 gap-4 md:gap-5 [column-fill:balance] space-y-4 md:space-y-5">
-                        {allProjects.map((proj) => {
-                          const isPortrait = proj.orientation === 'portrait';
-                          return (
-                            <motion.div
-                              key={proj.id}
-                              onClick={() => setActiveCaseStudyProject(proj)}
-                              className="break-inside-avoid group cursor-zoom-in overflow-hidden rounded-xl block mb-4 md:mb-5"
-                              whileHover={{ scale: 1.03 }}
-                              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                            >
-                              <div className={`relative overflow-hidden rounded-xl bg-zinc-50 border border-zinc-200/40 shadow-2xs group-hover:shadow-md transition-all duration-300 ${
-                                isPortrait ? 'aspect-[3/4]' : 'aspect-[16/9]'
-                              }`}>
-                                <img
-                                  src={proj.image}
-                                  alt={proj.title}
-                                  referrerPolicy="no-referrer"
-                                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                                />
-                              </div>
-                            </motion.div>
-                          );
-                        })}
+                  {section.title === 'Graphic Design' ? (() => {
+                    const filteredGdProjects = allProjects.filter((p) => {
+                      if (gdFilter === 'all') return true;
+                      if (gdFilter === 'promotionals') {
+                        return p.subGroup === 'promotionals' || p.tags?.includes('Promotionals');
+                      }
+                      if (gdFilter === 'posters') {
+                        return p.subGroup === 'posters' || p.tags?.includes('Posters / Artworks');
+                      }
+                      if (gdFilter === 'thumbnails') {
+                        return p.subGroup === 'thumbnails' || p.tags?.includes('Thumbnails');
+                      }
+                      return true;
+                    });
+
+                    const currentSpotlightProject = filteredGdProjects[gdSpotlightIndex % (filteredGdProjects.length || 1)] || filteredGdProjects[0];
+
+                    const countAll = allProjects.length;
+                    const countPromo = allProjects.filter(p => p.subGroup === 'promotionals' || p.tags?.includes('Promotionals')).length;
+                    const countPosters = allProjects.filter(p => p.subGroup === 'posters' || p.tags?.includes('Posters / Artworks')).length;
+                    const countThumbs = allProjects.filter(p => p.subGroup === 'thumbnails' || p.tags?.includes('Thumbnails')).length;
+
+                    return (
+                      <div className="space-y-6">
+                        {/* Graphic Design Gallery Header & Controls */}
+                        <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200/60">
+                          {/* Sub-category Quick Filters */}
+                          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+                            {[
+                              { id: 'all', label: 'All Work', count: countAll },
+                              { id: 'promotionals', label: 'Promotionals', count: countPromo },
+                              { id: 'posters', label: 'Posters / Artworks', count: countPosters },
+                              { id: 'thumbnails', label: 'Thumbnails', count: countThumbs },
+                            ].map((tab) => {
+                              const isActive = gdFilter === tab.id;
+                              return (
+                                <button
+                                  key={tab.id}
+                                  onClick={() => {
+                                    setGdFilter(tab.id as any);
+                                    setGdSpotlightIndex(0);
+                                  }}
+                                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
+                                    isActive
+                                      ? 'bg-zinc-950 text-white font-semibold shadow-xs'
+                                      : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200/80 hover:text-zinc-900'
+                                  }`}
+                                >
+                                  <span>{tab.label}</span>
+                                  <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded-full ${
+                                    isActive ? 'bg-white/20 text-white' : 'bg-zinc-200/80 text-zinc-500'
+                                  }`}>
+                                    {tab.count}
+                                  </span>
+                                </button>
+                              );
+                            })}
+                          </div>
+
+                          <div className="text-[11px] font-mono text-zinc-500 hidden sm:block">
+                            {filteredGdProjects.length} {filteredGdProjects.length === 1 ? 'item' : 'items'}
+                          </div>
+                        </div>
+
+                        {/* Content Presentation - Spotlight Showcase */}
+                        {allProjects.length > 0 ? (
+                          filteredGdProjects.length > 0 ? (
+                            <div className="space-y-4">
+                              {currentSpotlightProject && (
+                                <div className="space-y-3">
+                                  {/* Main Spotlight Card */}
+                                  <div 
+                                    onClick={() => setActiveCaseStudyProject(currentSpotlightProject)}
+                                    className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800 shadow-xl cursor-zoom-in group flex items-center justify-center"
+                                  >
+                                    <img
+                                      src={currentSpotlightProject.image}
+                                      alt={currentSpotlightProject.title}
+                                      referrerPolicy="no-referrer"
+                                      className="w-full h-full object-contain p-2 sm:p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+                                    />
+
+                                    {/* Previous / Next Arrow Controls */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setGdSpotlightIndex((prev) => (prev - 1 + filteredGdProjects.length) % filteredGdProjects.length);
+                                      }}
+                                      className="absolute left-3 top-1/2 -translate-y-1/2 min-w-[40px] min-h-[40px] rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/20 backdrop-blur-md cursor-pointer transition-all shadow-md active:scale-95 z-10"
+                                      aria-label="Previous artwork"
+                                    >
+                                      <ChevronLeft className="w-5 h-5" />
+                                    </button>
+
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setGdSpotlightIndex((prev) => (prev + 1) % filteredGdProjects.length);
+                                      }}
+                                      className="absolute right-3 top-1/2 -translate-y-1/2 min-w-[40px] min-h-[40px] rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/20 backdrop-blur-md cursor-pointer transition-all shadow-md active:scale-95 z-10"
+                                      aria-label="Next artwork"
+                                    >
+                                      <ChevronRight className="w-5 h-5" />
+                                    </button>
+
+                                    {/* Counter Badge */}
+                                    <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono z-10">
+                                      {(gdSpotlightIndex % filteredGdProjects.length) + 1} / {filteredGdProjects.length}
+                                    </div>
+
+                                    {/* Minimalist Fullscreen Expand Hint on Hover */}
+                                    <div className="absolute bottom-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono shadow-md">
+                                        <Maximize2 className="w-3.5 h-3.5" /> Fullscreen
+                                      </span>
+                                    </div>
+                                  </div>
+
+                                  {/* Thumbnail Filmstrip Scrubber */}
+                                  <div className="overflow-x-auto no-scrollbar py-2">
+                                    <div className="flex items-center gap-2.5">
+                                      {filteredGdProjects.map((p, idx) => {
+                                        const isSelected = (gdSpotlightIndex % filteredGdProjects.length) === idx;
+                                        return (
+                                          <button
+                                            key={p.id}
+                                            onClick={() => setGdSpotlightIndex(idx)}
+                                            className={`relative shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
+                                              isSelected 
+                                                ? 'border-zinc-950 shadow-md scale-105 ring-2 ring-zinc-950/20' 
+                                                : 'border-zinc-200 opacity-60 hover:opacity-100'
+                                            }`}
+                                          >
+                                            <img
+                                              src={p.image}
+                                              alt={p.title}
+                                              referrerPolicy="no-referrer"
+                                              className="w-full h-full object-cover"
+                                            />
+                                          </button>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            <div className="py-12 px-6 rounded-2xl border border-dashed border-zinc-200 text-center flex flex-col items-center justify-center gap-2">
+                              <p className="text-xs font-semibold text-zinc-600">No projects match this filter</p>
+                              <button
+                                onClick={() => setGdFilter('all')}
+                                className="text-[11px] font-mono text-zinc-900 underline underline-offset-2 cursor-pointer"
+                              >
+                                View all graphic design work
+                              </button>
+                            </div>
+                          )
+                        ) : (
+                          /* Clean, Modern Empty State Showcase */
+                          <div className="p-8 sm:p-12 rounded-2xl border border-dashed border-zinc-300/80 bg-gradient-to-b from-zinc-50/50 to-white text-center flex flex-col items-center justify-center gap-4">
+                            <div className="w-12 h-12 rounded-2xl bg-zinc-100 border border-zinc-200 flex items-center justify-center text-zinc-700 shadow-2xs">
+                              <Sparkle className="w-6 h-6 text-zinc-600" />
+                            </div>
+                            <div className="space-y-1.5 max-w-md">
+                              <h4 className="text-sm sm:text-base font-bold text-zinc-900">
+                                Spotlight Showcase Deck Ready
+                              </h4>
+                              <p className="text-xs text-zinc-500 leading-relaxed">
+                                Curated gallery deck with auto-fitting for Posters (3:4) and Thumbnails (16:9).
+                              </p>
+                            </div>
+                            <div className="inline-flex items-center gap-2 text-[11px] font-mono text-zinc-400 bg-zinc-100/80 px-3 py-1.5 rounded-full border border-zinc-200/60">
+                              <span>Ready for your new images</span>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                    ) : (
+                    );
+                  })() : (
+                    allProjects.length > 0 ? (
                       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5">
                         {(section.title === 'Social Media Management' || section.title === 'Web Design & Development' ? allProjects.slice(0, 2) : (section.title === 'Technical Documentation' ? allProjects.slice(0, 4) : allProjects.slice(0, 12))).map((proj) => (
                           <motion.div
@@ -1254,11 +1560,15 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
                           </motion.div>
                         ))}
                       </div>
+                    ) : (
+                      <div className="py-16 px-6 rounded-2xl border border-dashed border-zinc-300/80 bg-zinc-50/50 text-center flex flex-col items-center justify-center gap-2">
+                        <div className="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-400 mb-1">
+                          <ImageIcon className="w-5 h-5" />
+                        </div>
+                        <p className="text-xs font-semibold text-zinc-700">No images currently uploaded</p>
+                        <p className="text-[11px] text-zinc-400 max-w-xs">Ready for your new project images.</p>
+                      </div>
                     )
-                  ) : (
-                    <div className="py-12 rounded-xl border border-dashed border-zinc-200 text-center text-zinc-400 text-xs">
-                      No project cases published in this section.
-                    </div>
                   )}
                 </div>
               </div>
@@ -1384,6 +1694,24 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
                     const isPortrait = activeCaseStudyProject.orientation === 'portrait';
                     const currentIndex = GRAPHIC_DESIGN_16_PROJECTS.findIndex(p => p.id === activeCaseStudyProject.id);
                     const totalCount = GRAPHIC_DESIGN_16_PROJECTS.length;
+
+                    if (totalCount === 0) {
+                      return (
+                        <div className="relative w-full flex flex-col items-center justify-center transition-all duration-300 px-1 sm:px-8 max-w-4xl">
+                          <div className="mb-2 sm:mb-4 text-center px-2">
+                            <span className="text-xs sm:text-sm font-mono text-zinc-400 tracking-widest uppercase">
+                              1 of 1
+                            </span>
+                          </div>
+                          <img
+                            src={activeCaseStudyProject.image}
+                            alt={activeCaseStudyProject.title}
+                            referrerPolicy="no-referrer"
+                            className="rounded-xl max-h-[60vh] sm:max-h-[75vh] w-auto max-w-full object-contain border border-white/10 shadow-2xl"
+                          />
+                        </div>
+                      );
+                    }
 
                     return (
                       <div className={`relative w-full flex flex-col items-center justify-center transition-all duration-300 px-1 sm:px-8 ${

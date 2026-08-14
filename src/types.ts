@@ -12,6 +12,7 @@ export interface Project {
   tags: string[];
   link?: string;
   orientation?: 'landscape' | 'portrait';
+  subGroup?: 'promotionals' | 'posters' | 'thumbnails';
 }
 
 export interface Service {
