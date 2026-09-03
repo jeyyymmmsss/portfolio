@@ -355,7 +355,57 @@ const RIBBON_IMAGES: Record<string, string[]> = {
 };
 
 export const GRAPHIC_DESIGN_16_PROJECTS: (Project & { orientation?: 'portrait' | 'landscape'; subGroup?: 'promotionals' | 'posters' | 'thumbnails' })[] = [
-  // 1. PROMOTIONALS (Items 1 - 7)
+  // FEATURED / RECENT POSTERS (Items 1 - 4)
+  {
+    id: "gd-poster-11",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445032/el_clasico13x_zcphnn.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-12",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/dunesdaytry_bwy90r.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-13",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/madrid_g2sfhr.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-14",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/hamilton_aszsx4.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+
+  // 1. PROMOTIONALS (Items 5 - 11)
   {
     id: "gd-promo-1",
     title: "",
@@ -441,7 +491,7 @@ export const GRAPHIC_DESIGN_16_PROJECTS: (Project & { orientation?: 'portrait' |
     subGroup: "promotionals"
   },
 
-  // 2. POSTERS / ARTWORKS (Items 8 - 18)
+  // 2. POSTERS / ARTWORKS
   {
     id: "gd-poster-1",
     title: "",

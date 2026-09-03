@@ -224,7 +224,7 @@ export default function Hero({ name, title, bio, location, accent }: HeroProps) 
             id="hero-image-wrapper"
           >
             <img
-              src="https://www.image2url.com/r2/default/images/1784614978007-2c805cb3-e7a7-45ad-b618-efd2f69faa32.png"
+              src="https://res.cloudinary.com/zaunf8hr/image/upload/v1788445689/3d_avatar_mwzia8.png"
               alt="James Ramirez"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover grayscale-10 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
