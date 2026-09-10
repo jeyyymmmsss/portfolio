@@ -75,7 +75,7 @@ export default function Experience({ services, accent }: ExperienceProps) {
         </div>
 
         {/* DESKTOP GRID (Medium & Large screens) */}
-        <div className="hidden md:grid grid-cols-2 gap-6">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => (
             <motion.div
               key={service.id}

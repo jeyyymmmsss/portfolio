@@ -4,7 +4,7 @@ export const INITIAL_PROFILE = {
   name: "James Ramirez",
   title: "Aesthetic Specialist & Indie Vibe Coder",
   location: "Manila, Philippines",
-  bio: "Delivering high-fidelity results across Graphic Design, Social Media Management, Web Design & Development, and Technical Documentation. Committed to clean layouts, delightful micro-animations, and striking visual design.",
+  bio: "Delivering high-fidelity results across Graphic Design, Social Media Management, Web Design & Development, Technical Documentation, and Technical Drawings. Committed to clean layouts, delightful micro-animations, and striking visual design.",
   available: true,
   email: "jamesbrianramirezzz@gmail.com",
   socials: {
@@ -43,6 +43,13 @@ export const SERVICES: Service[] = [
     description: "Professional documentation including Standard Operating Procedures (SOPs), Work Instructions, User Manuals, Process Documentation, Job Aids, and Quality Management System (QMS) documents.",
     iconName: "FileText",
     deliverables: ["SOP & QMS Creation", "User Manuals & Work Instructions", "Process Optimization & Job Aids", "Regulatory & Audit Compliance"]
+  },
+  {
+    id: "tech-drawings",
+    title: "Technical Drawings",
+    description: "Standardized architectural drafting and AutoCAD documentation, including master floor layouts, building exterior elevations, longitudinal and transverse sections, reflected ceiling MEP plans, and detailed joinery schedules.",
+    iconName: "Compass",
+    deliverables: ["Architectural Floor Plans", "Exterior Elevations & Facades", "Cross-Section Detailing", "Reflected Ceiling & MEP Integration", "Joinery & Component Schedules"]
   }
 ];
 

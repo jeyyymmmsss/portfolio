@@ -21,10 +21,10 @@ export default function Footer({ name }: FooterProps) {
         <div className="flex items-center gap-3 text-left">
           <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-100 border border-zinc-200/50 shrink-0">
             <img 
-              src="https://i.ibb.co/v6JcRs0w/Untitled-design-7.png" 
+              src="https://res.cloudinary.com/zaunf8hr/image/upload/v1789024716/watermark_nu32sl.png" 
               alt="James Ramirez Logo" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-0.5"
             />
           </div>
           <div className="flex flex-col">

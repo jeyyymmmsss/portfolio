@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -195,6 +196,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-zinc-50 selection:bg-zinc-900 selection:text-white">
+      {/* Short Modern Intro Loading Screen with Logo Animation and Progress Bar */}
+      <LoadingScreen minDuration={2000} />
+
       {/* Premium Horizontal Scroll Progress Indicator */}
       <div className="fixed top-0 left-0 right-0 h-[3px] z-50 pointer-events-none bg-zinc-200/20 dark:bg-zinc-800/20">
         <div 

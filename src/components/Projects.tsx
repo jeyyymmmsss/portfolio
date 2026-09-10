@@ -23,10 +23,10 @@ interface ProjectsProps {
 
 interface CategoryCaseStudy {
   id: string;
-  title: 'Graphic Design' | 'Social Media Management' | 'Web Design & Development' | 'Technical Documentation';
+  title: 'Graphic Design' | 'Social Media Management' | 'Web Design & Development' | 'Technical Documentation' | 'Technical Drawings';
   oneLiner: string;
   overview: string;
-  iconName: 'FileText' | 'Share2' | 'Palette' | 'Globe';
+  iconName: 'FileText' | 'Share2' | 'Palette' | 'Globe' | 'Compass';
   glowColor: string; // CSS color string for shadow
   gradientClasses: string; // Tailwind classes for the logo bg
   workflow: { step: string; title: string; desc: string }[];
@@ -38,6 +38,77 @@ interface CategoryCaseStudy {
 }
 
 const PLACEHOLDER_CASES: Record<string, Omit<Project, 'category'>[]> = {
+  'Technical Drawings': [
+    {
+      id: "td-draw-1",
+      title: "Sheet A1 — Architectural Floor Plan & Space Layout",
+      client: "Architectural & CAD Practice",
+      year: "2026",
+      description: "Comprehensive master floor layout detailing room partitions, structural grid lines, dimension strings, door swings, and circulation pathways.",
+      tags: ["Floor Plan", "CAD Drafting", "Space Planning", "Architectural"],
+      image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A1_ntwnqy.png",
+      images: [
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A1_ntwnqy.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A2_mtjdy6.png"
+      ],
+      orientation: "landscape"
+    },
+    {
+      id: "td-draw-2",
+      title: "Sheet A2 — Building Elevations & Facade Hierarchy",
+      client: "Architectural & CAD Practice",
+      year: "2026",
+      description: "Front, rear, and lateral exterior elevations highlighting vertical datums, window wall systems, finish materials, and finished grade levels.",
+      tags: ["Elevations", "Facade Detailing", "Vertical Datums", "Exterior Finishes"],
+      image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A2_mtjdy6.png",
+      images: [
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A2_mtjdy6.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A3_yk50qu.png"
+      ],
+      orientation: "landscape"
+    },
+    {
+      id: "td-draw-3",
+      title: "Sheet A3 — Longitudinal & Transverse Cross Sections",
+      client: "Architectural & CAD Practice",
+      year: "2026",
+      description: "Transverse and longitudinal building sections showing floor-to-floor structural heights, ceiling plenums, roof framing, and foundation footings.",
+      tags: ["Cross Sections", "Structural Coordination", "Framing", "Clearances"],
+      image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A3_yk50qu.png",
+      images: [
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A3_yk50qu.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A4_sdqdhp.png"
+      ],
+      orientation: "landscape"
+    },
+    {
+      id: "td-draw-4",
+      title: "Sheet A4 — Reflected Ceiling Plan & MEP Integration",
+      client: "Architectural & CAD Practice",
+      year: "2026",
+      description: "Integrated layout mapping ceiling fixtures, HVAC supply/return diffusers, circuit connections, and service access panels.",
+      tags: ["MEP Integration", "Reflected Ceiling", "HVAC Routing", "Electrical"],
+      image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A4_sdqdhp.png",
+      images: [
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A4_sdqdhp.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A5_gaxmdc.png"
+      ],
+      orientation: "landscape"
+    },
+    {
+      id: "td-draw-5",
+      title: "Sheet A5 — Construction Details, Joinery & Component Schedules",
+      client: "Architectural & CAD Practice",
+      year: "2026",
+      description: "Large-scale connection profiles, door & window schedule matrices, millwork joinery assemblies, and general specification notes.",
+      tags: ["Construction Details", "Joinery", "Component Schedules", "Specifications"],
+      image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A5_gaxmdc.png",
+      images: [
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A5_gaxmdc.png"
+      ],
+      orientation: "landscape"
+    }
+  ],
   'Technical Documentation': [
     {
       id: "td-1",
@@ -850,6 +921,15 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
         "https://res.cloudinary.com/zaunf8hr/image/upload/v1785942206/7_srr9y2.png"
       ];
     }
+    if (proj.category === 'Technical Drawings' || proj.id.startsWith('td-draw-')) {
+      return [
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A1_ntwnqy.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A2_mtjdy6.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A3_yk50qu.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A4_sdqdhp.png",
+        "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A5_gaxmdc.png"
+      ];
+    }
     if (proj.category === 'Technical Documentation' || proj.id.startsWith('td-') || proj.id === 'qms-doc') {
       return [
         "https://res.cloudinary.com/zaunf8hr/image/upload/v1785947264/1_vm88jx.png",
@@ -877,13 +957,14 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
       const isSocialMedia = activeCaseStudyProject.category === 'Social Media Management' || activeCaseStudyProject.id.startsWith('sm-');
       const isGraphicDesign = activeCaseStudyProject.category === 'Graphic Design' || activeCaseStudyProject.id.startsWith('gd-');
       const isTechDoc = activeCaseStudyProject.category === 'Technical Documentation' || activeCaseStudyProject.id.startsWith('td-') || activeCaseStudyProject.id === 'qms-doc';
+      const isTechDrawing = activeCaseStudyProject.category === 'Technical Drawings' || activeCaseStudyProject.id.startsWith('td-draw-');
 
       if (e.key === 'Escape') {
         setActiveCaseStudyProject(null);
         return;
       }
 
-      if (isSocialMedia || isTechDoc) {
+      if (isSocialMedia || isTechDoc || isTechDrawing) {
         const galleryLength = getGalleryImages(activeCaseStudyProject).length;
 
         if (e.key === 'ArrowRight' || e.key === 'Right') {
@@ -973,7 +1054,7 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
   // Form states for custom reference creation
   const [newTitle, setNewTitle] = useState('');
   const [newClient, setNewClient] = useState('');
-  const [newCategory, setNewCategory] = useState<'Graphic Design' | 'Social Media Management' | 'Web Design & Development' | 'Technical Documentation'>('Graphic Design');
+  const [newCategory, setNewCategory] = useState<'Graphic Design' | 'Social Media Management' | 'Web Design & Development' | 'Technical Documentation' | 'Technical Drawings'>('Graphic Design');
   const [newDesc, setNewDesc] = useState('');
   const [newLongDesc, setNewLongDesc] = useState('');
   const [newTags, setNewTags] = useState('');
@@ -1004,7 +1085,7 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
     }
   };
 
-  const categories = ['Graphic Design', 'Social Media Management', 'Web Design & Development', 'Technical Documentation'];
+  const categories = ['Graphic Design', 'Social Media Management', 'Web Design & Development', 'Technical Documentation', 'Technical Drawings'];
 
   // Timeless metadata configuration for categories
   const sectionsData = [
@@ -1047,6 +1128,17 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
       getProjects: () => [
         ...(PLACEHOLDER_CASES['Technical Documentation'] || []),
         ...projects.filter(p => p.id.startsWith('custom-') && p.category === 'Technical Documentation')
+      ]
+    },
+    {
+      id: "technical-drawings",
+      title: "Technical Drawings" as const,
+      label: "05 / TECHNICAL DRAWINGS",
+      oneLiner: "Architectural floor plans, exterior elevations, cross-sections, and CAD detail sheets.",
+      intro: "A comprehensive set of architectural technical drawings (Sheets A1 through A5). Created with standard architectural scales, exact dimension stringing, MEP integration, and detailed construction schedules.",
+      getProjects: () => [
+        ...(PLACEHOLDER_CASES['Technical Drawings'] || []),
+        ...projects.filter(p => p.id.startsWith('custom-') && p.category === 'Technical Drawings')
       ]
     }
   ];
@@ -1124,6 +1216,8 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
         return ["Investor Presentation Decks", "Corporate Brochure Layouts", "Art Poster Systems", "Packaging & Carton Labels", "Scalable Vector Branding", "Information Hierarchy"];
       case "Web Design & Development":
         return ["React Component Building", "Tailwind CSS Styling", "Aesthetic Fluid Prototyping", "Framer Motion Animations", "Client-Side State Engines", "Responsive Screen Architecture"];
+      case "Technical Drawings":
+        return ["AutoCAD Drafting", "Architectural Floor Plans", "Building Elevations", "Cross-Section Detailing", "Reflected Ceiling & MEP", "Door & Window Schedules"];
       default:
         return ["Creative Layout", "Design Precision", "Professional Execution"];
     }
@@ -1188,6 +1282,21 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
         gallery: [
           "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop"
+        ]
+      };
+    } else if (category === "Technical Drawings") {
+      return {
+        overview: proj.longDescription || proj.description,
+        problem: "Architectural blueprints and engineering drawings require extreme accuracy, standardized line weights, layer management, and complete coordination across MEP and structural domains.",
+        process: "Developed scalable AutoCAD vector drafting sets adhering to architectural standards, verified dimension strings against grid baselines, and cross-referenced all elevation datums with building sections.",
+        solution: "Engineered comprehensive 5-sheet construction package (Sheets A1 through A5) complete with room schedules, material callouts, joinery profiles, and title block compliance.",
+        results: "Achieved 100% drafting standards compliance, zero dimensional discrepancies across multi-disciplinary plans, and ready-for-permit construction clarity.",
+        gallery: [
+          "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A1_ntwnqy.png",
+          "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A2_mtjdy6.png",
+          "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A3_yk50qu.png",
+          "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024675/A4_sdqdhp.png",
+          "https://res.cloudinary.com/zaunf8hr/image/upload/v1789024676/A5_gaxmdc.png"
         ]
       };
     }
@@ -1578,7 +1687,7 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
                   })() : (
                     allProjects.length > 0 ? (
                       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5">
-                        {(section.title === 'Social Media Management' || section.title === 'Web Design & Development' ? allProjects.slice(0, 2) : (section.title === 'Technical Documentation' ? allProjects.slice(0, 4) : allProjects.slice(0, 12))).map((proj) => (
+                        {(section.title === 'Social Media Management' || section.title === 'Web Design & Development' ? allProjects.slice(0, 2) : (section.title === 'Technical Documentation' ? allProjects.slice(0, 4) : (section.title === 'Technical Drawings' ? allProjects.slice(0, 6) : allProjects.slice(0, 12)))).map((proj) => (
                           <motion.div
                             key={proj.id}
                             onClick={() => setActiveCaseStudyProject(proj)}
@@ -1587,7 +1696,7 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
                             transition={{ type: "spring", stiffness: 300, damping: 25 }}
                           >
                             <div className={`relative overflow-hidden rounded-xl bg-zinc-50 border border-zinc-200/40 shadow-2xs group-hover:shadow-md transition-all duration-300 ${
-                              section.title === 'Technical Documentation' || section.title === 'Web Design & Development' || proj.orientation === 'landscape' ? 'aspect-[16/10]' : 'aspect-[4/3]'
+                              section.title === 'Technical Documentation' || section.title === 'Technical Drawings' || section.title === 'Web Design & Development' || proj.orientation === 'landscape' ? 'aspect-[16/10]' : 'aspect-[4/3]'
                             }`}>
                               {proj.video ? (
                                 <video
@@ -2021,6 +2130,7 @@ export default function Projects({ projects, onAddProject, accent }: ProjectsPro
                         className="w-full px-3 py-2 text-xs rounded-xl border border-zinc-200 focus:outline-hidden focus:border-zinc-950 bg-zinc-50/50 font-mono text-[11px]"
                       >
                         <option value="Technical Documentation">Technical Documentation</option>
+                        <option value="Technical Drawings">Technical Drawings</option>
                         <option value="Social Media Management">Social Media Management</option>
                         <option value="Graphic Design">Graphic Design</option>
                         <option value="Web Design & Development">Web Design & Development</option>

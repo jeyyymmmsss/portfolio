@@ -1,7 +1,7 @@
 export interface Project {
   id: string;
   title: string;
-  category: 'Technical Documentation' | 'Social Media Management' | 'Graphic Design' | 'Web Design & Development';
+  category: 'Technical Documentation' | 'Social Media Management' | 'Graphic Design' | 'Web Design & Development' | 'Technical Drawings';
   year: string;
   client: string;
   description: string;

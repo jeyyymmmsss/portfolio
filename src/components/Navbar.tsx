@@ -67,10 +67,10 @@ export default function Navbar({ name, available, isDarkMode, onToggleDarkMode, 
         >
           <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-zinc-100 transition-transform group-hover:rotate-12 group-hover:scale-105 border border-zinc-200/50 shrink-0">
             <img 
-              src="https://i.ibb.co/v6JcRs0w/Untitled-design-7.png" 
+              src="https://res.cloudinary.com/zaunf8hr/image/upload/v1789024716/watermark_nu32sl.png" 
               alt="James Ramirez Logo" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-0.5"
             />
           </div>
           <span className="inline-flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity">
