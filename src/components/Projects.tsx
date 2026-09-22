@@ -426,57 +426,79 @@ const RIBBON_IMAGES: Record<string, string[]> = {
 };
 
 export const GRAPHIC_DESIGN_16_PROJECTS: (Project & { orientation?: 'portrait' | 'landscape'; subGroup?: 'promotionals' | 'posters' | 'thumbnails' })[] = [
-  // FEATURED / RECENT POSTERS (Items 1 - 4)
+  // 1. PROMOTIONALS (Featured at the front)
   {
-    id: "gd-poster-11",
+    id: "gd-promo-iphone-2",
     title: "",
     category: "Graphic Design",
     client: "",
     year: "2026",
     description: "",
-    tags: ["Posters / Artworks"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445032/el_clasico13x_zcphnn.png",
-    orientation: "portrait",
-    subGroup: "posters"
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075779/Iphone18_2_jaugtr.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-poster-12",
+    id: "gd-promo-iphone-1",
     title: "",
     category: "Graphic Design",
     client: "",
     year: "2026",
     description: "",
-    tags: ["Posters / Artworks"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/dunesdaytry_bwy90r.png",
-    orientation: "portrait",
-    subGroup: "posters"
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075779/Iphone18_1_ok1ujs.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-poster-13",
+    id: "gd-promo-iphone-4",
     title: "",
     category: "Graphic Design",
     client: "",
     year: "2026",
     description: "",
-    tags: ["Posters / Artworks"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/madrid_g2sfhr.png",
-    orientation: "portrait",
-    subGroup: "posters"
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075779/Iphone18_4_f5gksd.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
   {
-    id: "gd-poster-14",
+    id: "gd-promo-iphone-3",
     title: "",
     category: "Graphic Design",
     client: "",
     year: "2026",
     description: "",
-    tags: ["Posters / Artworks"],
-    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/hamilton_aszsx4.png",
-    orientation: "portrait",
-    subGroup: "posters"
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075779/Iphone18_3_bzdhtr.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
   },
-
-  // 1. PROMOTIONALS (Items 5 - 11)
+  {
+    id: "gd-promo-odyssey-shirt",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075781/odyssey-shirt_xymqqs.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
+  },
+  {
+    id: "gd-promo-roof",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Promotionals"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075777/roof_ahfc6y.png",
+    orientation: "landscape",
+    subGroup: "promotionals"
+  },
   {
     id: "gd-promo-1",
     title: "",
@@ -563,6 +585,66 @@ export const GRAPHIC_DESIGN_16_PROJECTS: (Project & { orientation?: 'portrait' |
   },
 
   // 2. POSTERS / ARTWORKS
+  {
+    id: "gd-poster-cyclops",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1790075790/cyclops_zbh4m7.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-11",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445032/el_clasico13x_zcphnn.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-12",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/dunesdaytry_bwy90r.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-13",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/madrid_g2sfhr.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
+  {
+    id: "gd-poster-14",
+    title: "",
+    category: "Graphic Design",
+    client: "",
+    year: "2026",
+    description: "",
+    tags: ["Posters / Artworks"],
+    image: "https://res.cloudinary.com/zaunf8hr/image/upload/v1788445031/hamilton_aszsx4.png",
+    orientation: "portrait",
+    subGroup: "posters"
+  },
   {
     id: "gd-poster-1",
     title: "",
